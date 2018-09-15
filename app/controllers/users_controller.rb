@@ -44,7 +44,7 @@ class UsersController < ApplicationController
       redirect to '/login'
     end
 
-    get '/tweets/:username' do
+    get '/tweets/:slug' do
       @user = User.find_by(username: params[:username])
       @tweets = []
       Tweet.all.collect do |tweet|
