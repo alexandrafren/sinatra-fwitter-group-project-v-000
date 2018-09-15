@@ -47,6 +47,7 @@ class UsersController < ApplicationController
     get '/tweets/:username' do
       @user = User.find_by(username: params[:username])
       @tweets = Tweet.all.collect { |tweet| tweet.user_id == @user.id}
+      binding.pry
       erb :'/users/show'
     end
 
