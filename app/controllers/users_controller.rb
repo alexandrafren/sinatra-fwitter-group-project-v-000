@@ -52,7 +52,6 @@ class UsersController < ApplicationController
           @tweets << tweet
         end
       end
-      binding.pry
       erb :'/users/show'
     end
 
