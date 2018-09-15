@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     get '/tweets/:username' do
       @user = User.find_by(username: params[:username])
       @tweets = []
-      Tweet.all.collect do |tweet| 
+      Tweet.all.collect do |tweet|
         if tweet.user_id == @user.id
           @tweets << tweet
         end
