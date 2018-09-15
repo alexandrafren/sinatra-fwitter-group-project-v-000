@@ -49,9 +49,10 @@ class UsersController < ApplicationController
       @tweets = []
       Tweet.all.collect do |tweet|
         if tweet.user_id == @user.id
-          @tweets << tweet.content
+          @tweets << tweet
         end
       end
+      binding.pry
       erb :'/users/show'
     end
 
