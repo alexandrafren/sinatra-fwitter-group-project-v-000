@@ -49,6 +49,7 @@ class TweetsController < ApplicationController
       redirect to '/tweets#{@tweet.id}'
     else
       redirect to '/tweets/new'
+    end
   end
 
   delete '/tweets/:id/delete' do
