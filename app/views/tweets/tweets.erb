@@ -1,5 +1,5 @@
 <h1>Welcome,</h1>
-<% logged_in? %>
+<% if logged_in? %>
   <% Tweet.all.each do |chirp| %>
     <%= chirp.content %>
     <br>
